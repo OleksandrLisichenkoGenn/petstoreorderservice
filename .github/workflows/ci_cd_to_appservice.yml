@@ -18,7 +18,7 @@ jobs:
       run: |
         ls -al
     - name: Update the version.json
-      run: echo -n -e "{\"version\":\"${{ github.sha }}\",\"date\":\"$(date '+%m-%d-%Y %H:%M:%S')\"}" > src/main/resources/static/content/version.json
+      run: echo -n -e "{\"version\":\"${{ github.sha }}\",\"date\":\"$(date '+%m-%d-%Y %H:%M:%S')\"}" > src/main/resources/version.json
     - run: cat src/main/resources/static/content/version.json
     - uses: actions/setup-java@v3
       name: Building ${{ env.SERVICE_NAME }} with Java 17
